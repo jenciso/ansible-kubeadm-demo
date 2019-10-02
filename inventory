@@ -1,0 +1,7 @@
+[master]
+kube-master.10.0.5.31.xip.io  ansible_host=127.0.0.1  ansible_port=2231
+
+[nodes]
+kube-node01.10.0.5.32.xip.io  ansible_host=127.0.0.1  ansible_port=2232
+kube-node02.10.0.5.33.xip.io  ansible_host=127.0.0.1  ansible_port=2233
+kube-node03.10.0.5.34.xip.io  ansible_host=127.0.0.1  ansible_port=2234

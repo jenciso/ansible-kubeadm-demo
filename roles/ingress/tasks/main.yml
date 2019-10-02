@@ -1,0 +1,25 @@
+---
+- name: ingress | create dir
+  file: path=/opt/ingress/k8s state=directory
+
+- name: ingress | copy yaml
+  template:
+    src: "{{ item }}"
+    dest: /opt/ingress/k8s
+  with_items:
+    - configmap.yaml
+    - default-backend.yaml
+    - rbac.yaml
+    - service-nodeport.yaml
+    - with-rbac-ssl-default.yaml
+
+
+- name: ingress | deploy internal nginx-controller
+  shell: kubectl apply -f /opt/ingress/k8s/{{ item }}
+  with_items:
+    - configmap.yaml
+    - default-backend.yaml
+    - rbac.yaml
+    - service-nodeport.yaml
+    - with-rbac-ssl-default.yaml
+  ignore_errors: true

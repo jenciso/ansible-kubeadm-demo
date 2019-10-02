@@ -1,0 +1,7 @@
+---
+- name: node_exporter | installing
+  include: install.yml
+
+- name: node_exporter | setup
+  include: setup.yml
+

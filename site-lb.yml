@@ -1,0 +1,17 @@
+---
+- name: kubernetes | lb
+  hosts: lb
+  remote_user: ansible
+  roles:
+    - haproxy
+  tags:
+    - lb
+
+
+- name: kubernetes | ingress
+  hosts: lb
+  remote_user: ansible
+  roles:
+    - ingress
+  tags:
+    - ingress
