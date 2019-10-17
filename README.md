@@ -19,5 +19,7 @@ kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address $(h
 ```
 
 ## GITLAB RUNNER
+
 https://stackoverflow.com/questions/54707598/how-to-customise-config-toml-on-kubernetes
+
 https://gitlab.com/gitlab-org/gitlab-runner/issues/2578
